@@ -2,7 +2,7 @@ import type { SongFolder } from './types.js';
 import Player from './Player.js';
 import Selector from './Selector.js';
 
-const JSON_URL = 'https://olliee2.github.io/audio/songs.json';
+const JSON_URL = 'https://ethan-hawksley.github.io/audio/songs.json';
 
 fetch(JSON_URL)
   .then((response) => {
