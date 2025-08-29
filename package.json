@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir -p docs && tsc && cp -r public/* docs/",
+    "build": "mkdir -p edutainment && tsc && cp -r public/* edutainment/",
     "watch": "tsc --watch",
-    "clean": "rm -rf docs/*",
-    "start": "serve docs",
+    "clean": "rm -rf edutainment/*",
+    "start": "serve edutainment",
     "lint": "eslint 'src/**/*.{ts,js}'",
     "format": "prettier --write 'src/**/*.{ts,js,css,html}' 'public/**/*.{css,html}'",
-    "copy:watch": "cp -r public/* docs/ && chokidar 'public/**/*.{html,css}' -c 'cp -r public/* docs/'",
+    "copy:watch": "cp -r public/* edutainment/ && chokidar 'public/**/*.{html,css}' -c 'cp -r public/* edutainment/'",
     "dev": "npm run clean && npm-run-all --parallel watch copy:watch start"
   },
   "repository": {
