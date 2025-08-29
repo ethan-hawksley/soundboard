@@ -116,6 +116,8 @@ function loadApp(songJSON: SongFolder) {
       e.target instanceof HTMLTextAreaElement
     )
       return;
+
+    if (e.ctrlKey || e.metaKey) return;
     // Space or ; to play/pause
     // K to play previous song
     // J to play next song
