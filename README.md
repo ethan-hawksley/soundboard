@@ -51,5 +51,6 @@ An online soundboard for playing .mp3, .ogg, .wav, and .flac files in the browse
 
 ### Hosting custom music files
 
-Music files are hosted on the backend, which is stored as in a separate repository: https://github.com/ethan-hawksley/audio
+Music files are hosted on the backend, which is stored as in a separate
+repository: https://github.com/ethan-hawksley/audio
 Consult the documentation on that repository for configuring your own music to be used in the program.
