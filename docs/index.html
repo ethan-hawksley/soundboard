@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Soundboard</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="favicon.png" rel="icon">
+</head>
+<body>
+<main id="container">
+    <dialog id="shortcuts-popup">
+        <button id="close-modal" onclick="// noinspection JSUnresolvedReference
+document.getElementById('shortcuts-popup').close()">X
+        </button>
+        <h1>Keyboard Shortcuts</h1>
+        <ul>
+            <li>Space or ; - Toggle playback</li>
+            <li>K - Previous song</li>
+            <li>L - Next song</li>
+            <li>S - Shuffle queue</li>
+            <li>← - Skip back 10 seconds</li>
+            <li>→ - Skip forwards 10 seconds</li>
+            <li>/ - Focus filter bar</li>
+        </ul>
+    </dialog>
+    <section id="song-selector">
+        <input id="filter-bar" spellcheck="false" type="search">
+        <div id="sorting-buttons">
+            <button id="change-mode-button"><img alt="Change Mode" id="change-mode-image" src="time.svg"></button>
+            <button id="change-direction-button"><img alt="Change Sorting Direction" id="change-direction-image"
+                                                      src="arrow-up.svg"></button>
+        </div>
+        <div id="song-tree"></div>
+    </section>
+    <aside id="song-sidebar">
+        <h1 id="soundboard-title"><a href="https://github.com/olliee2/soundboard" target="_blank">SoundBeats</a>
+        </h1>
+        <h2 id="song-title">Choose a song</h2>
+        <div id="song-controls-container">
+            <button class="player-button" id="previous-button" title="K"><img alt="Previous Song" src="previous.svg">
+            </button>
+            <button class="player-button" id="play-button" title="Space or ;"><img alt="Toggle Playback"
+                                                                                   id="toggle-playback"
+                                                                                   src="play.svg"></button>
+            <button class="player-button" id="next-button" title="L"><img alt="Next Song" src="next.svg"></button>
+            <button class="player-button" id="mute-button" title="M"><img alt="Mute Song" id="mute-image"
+                                                                          src="unmuted.svg"></button>
+            <button class="player-button" id="shuffle-button" title="S"><img alt="Shuffle Queue" src="shuffle.svg">
+            </button>
+        </div>
+        <div id="seek-bar-container">
+            <time datetime="PT0S" id="song-current-time">0:00</time>
+            <input id="seek-bar" max="0" type="range"
+                   value="0">
+            <time datetime="PT0S" id="song-total-time">0:00</time>
+
+        </div>
+        <div class="hidden" id="queue-container">
+            <h2 id="queue-title">Queue</h2>
+            <div>
+                <time datetime="PT0S" id="queue-current-time">0:00</time>
+                /
+                <time datetime="PT0S" id="queue-total-time">0:00</time>
+            </div>
+            <span><time datetime="PT0S" id="queue-remaining-time">0:00</time> Remaining</span>
+            <div id="queue-songs-container"></div>
+        </div>
+        <button id="keyboard-shortcuts-button" onclick="// noinspection JSUnresolvedReference
+document.getElementById('shortcuts-popup').showModal()">?
+        </button>
+    </aside>
+</main>
+<script src="main.js" type="module"></script>
+</body>
+</html>
