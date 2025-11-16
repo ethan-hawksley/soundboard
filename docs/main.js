@@ -1,6 +1,6 @@
 import Player from './Player.js';
 import Selector from './Selector.js';
-const JSON_URL = 'https://ethan-hawksley.github.io/audio/songs.json';
+const JSON_URL = 'https://hawksley.dev/audio/songs.json';
 fetch(JSON_URL)
     .then((response) => {
     if (!response.ok) {
@@ -49,6 +49,8 @@ function loadApp(songJSON) {
     document.addEventListener('keydown', (e) => {
         if (e.target instanceof HTMLInputElement ||
             e.target instanceof HTMLTextAreaElement)
+            return;
+        if (e.ctrlKey || e.metaKey)
             return;
         // Space or ; to play/pause
         // K to play previous song

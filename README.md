@@ -23,15 +23,17 @@ An online soundboard for playing .mp3, .ogg, .wav, and .flac files in the browse
 > supported.
 
 1. Clone the repository:
+
    ```sh
     git clone https://github.com/ethan-hawksley/soundboard.git
    cd soundboard
    ```
 
 2. Install dependencies:
-    ```sh
+
+   ```sh
    npm install
-    ```
+   ```
 
 3. Build and run the project:
    ```sh

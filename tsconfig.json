@@ -3,7 +3,7 @@
     "target": "es2017",
     "module": "esnext",
     "rootDir": "src",
-    "outDir": "edutainment",
+    "outDir": "docs",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
